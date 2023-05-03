@@ -27,15 +27,15 @@ pip install transformers
 
 ### start training
 
-- train CNN-ED model
+
+- train CNN-ED model tests with baseline and LeakyReLU
 ```    
-python main.py --dataset word --nt 1000 --nq 1000 --epochs 20 --save-split --recall
+Baseline: python3 main.py --dataset word --nt 1000 --nq 1000 --epochs 20 --save-split --recall
+Version 1: python3 main.py --dataset word --nt 1000 --nq 1000 --epochs 20 --leaky_relu 0.01 --save-split --recall 
+Version 2: python3 main.py --dataset word --nt 1000 --nq 1000 --epochs 20 --leaky_relu 0.05 --save-split --recall
+Version 3: python3 main.py --dataset word --nt 1000 --nq 1000 --epochs 20 --leaky_relu 0.10 --save-split --recall
 ```
 
-- test bert embedding
-```
-python main.py --dataset word --nt 1000 --nq 1000 --bert --save-split --recall
-```
 
 ##### optional arguments:
       -h, --help            show this help message and exit
